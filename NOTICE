@@ -1,0 +1,23 @@
+Source attribution
+
+All Raizing project HDL (rtl/ outside rtl/chips/ and rtl/memory/ika95/, the
+core top, constraints and tools) is licensed GPL-3.0-or-later. See LICENSE.
+
+The public MAME models consulted as behavior references credit Quench, Yochizo
+and David Haywood. Those model implementations are not included here.
+
+External components keep their own licenses and notices:
+
+- MiSTer framework (sys/): MiSTer-devel/Template_MiSTer; GPL-2.0-or-later
+  and GPL-3.0-or-later per file.
+- FX68K (rtl/chips/fx68k): Jorge Cwik; GPL-3.0.
+- T80 (rtl/chips/T80): Daniel Wallner and contributors; BSD-style license in
+  the source headers.
+- IKAOPM (rtl/chips/ikaopm) and the IKA SDRAM controller (rtl/chips/ikautil_SDRAM,
+  rtl/memory/ika95): ika-musume; BSD-2-Clause.
+- JT6295 (rtl/chips/jt6295) and its state-only derivative
+  rtl/sound/raizing_ss_jt6295.sv: Jose Tejada Gomez; GPL-3.0-or-later.
+- The save-state bus and DDR interfaces at the top of rtl/state/raizing_state.sv
+  are adapted from MiSTer-devel/Arcade-TaitoF2_MiSTer (GPL; its sources state
+  no version).
+- The raizing_z80 wrapper in rtl/sound/raizing_sound.sv is BSD-3-Clause.

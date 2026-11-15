@@ -1,0 +1,2 @@
+# Core PLL (module and instance `pll`) and the board clock enables.
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) raizing_clocks.sv]

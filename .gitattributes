@@ -1,0 +1,41 @@
+# Preserve source and provenance hashes; do not normalize pinned bytes.
+* -text
+
+# Keep the inherited license and legacy PLL package checkout bytes stable.
+/LICENSE text eol=crlf
+/rtl/pll/pll_0002.qip text eol=crlf
+/rtl/pll/pll_0002_q13.qip text eol=crlf
+
+# Reproduce the pinned Windows checkout, retaining stock Template Git blobs.
+/sys/alsa.sv text eol=crlf
+/sys/ascal.vhd text eol=crlf
+/sys/audio_out.sv text eol=crlf
+/sys/gamma_corr.sv text eol=crlf
+/sys/hps_io.sv text eol=crlf
+/sys/hq2x.sv text eol=crlf
+/sys/i2s.v text eol=crlf
+/sys/ltc2308.sv text eol=crlf
+/sys/mcp23009.sv text eol=crlf
+/sys/osd.v text eol=crlf
+/sys/pll.13.qip text eol=crlf
+/sys/pll_audio.13.qip text eol=crlf
+/sys/pll_audio.qip text eol=crlf
+/sys/pll_audio/pll_audio_0002.qip text eol=crlf
+/sys/pll_cfg.qip text eol=crlf
+/sys/pll_cfg/pll_cfg_hdmi.v text eol=crlf
+/sys/pll_hdmi.13.qip text eol=crlf
+/sys/pll_hdmi.qip text eol=crlf
+/sys/pll_hdmi/pll_hdmi_0002.qip text eol=crlf
+/sys/pll_hdmi_adj.vhd text eol=crlf
+/sys/pll_q13.qip text eol=crlf
+/sys/pll_q17.qip text eol=crlf
+/sys/scandoubler.v text eol=crlf
+/sys/scanlines.v text eol=crlf
+/sys/shadowmask.sv text eol=crlf
+/sys/sigma_delta_dac.v text eol=crlf
+/sys/spdif.v text eol=crlf
+/sys/sys.qip text eol=crlf
+/sys/sys_top.v text eol=crlf
+/sys/sysmem.sv text eol=crlf
+/sys/vga_out.sv text eol=crlf
+/sys/yc_out.sv text eol=crlf

@@ -1,0 +1,46 @@
+# Board profile table: canonical board IDs and their translations.
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/raizing_board_pkg.sv
+# Shared chip sockets used by the sound and board files.
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/board/raizing_socket_pkg.sv
+
+# CPU, sound chip and SDRAM controller IP.
+foreach source {fx68k.sv fx68kAlu.sv uaddrPla.sv} {
+    set_global_assignment -name SYSTEMVERILOG_FILE rtl/chips/fx68k/$source
+}
+set_global_assignment -name SEARCH_PATH rtl/chips/fx68k
+foreach source {T80_Pack.vhd T80_Reg.vhd T80_MCode.vhd T80_ALU.vhd T80.vhd} {
+    set_global_assignment -name VHDL_FILE rtl/chips/T80/$source
+}
+set_global_assignment -name QIP_FILE rtl/chips/ikaopm/src/IKAOPM.qip
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/memory/ika95/ikautil_sdram_rz.sv
+set_global_assignment -name SEARCH_PATH rtl/memory/ika95
+
+# CPU bus and context (packages first).
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/cpu/raizing_cpu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/cpu/raizing_cpu_bus.sv
+
+# Save states, sound, memory.
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/state/raizing_state.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/sound/raizing_sound.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/sound/raizing_ss_jt6295.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/memory/raizing_memory.sv
+
+# Video: GP9001, tile/sprite/text rows, composition and board wrapper.
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/raizing_gp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/raizing_tile.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/raizing_sprite.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/raizing_text.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/raizing_video.sv
+
+# MiSTer platform and boards. Clocks are listed in rtl/pll.qip.
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/platform/raizing_platform.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/board/raizing_early.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/board/raizing_garegga.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/board/raizing_late.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/board/raizing_bakraid.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/board/raizing_batrider.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/board/raizing_board.sv
+
+# Core top and constraints.
+set_global_assignment -name SYSTEMVERILOG_FILE Arcade-Raizing.sv
+set_global_assignment -name SDC_FILE Arcade-Raizing.sdc
