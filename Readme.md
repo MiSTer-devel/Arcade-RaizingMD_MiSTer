@@ -42,7 +42,7 @@ _If you have one of the Raizing arcade boards and would like to help make this m
 _Original [Arcade-Raizing](https://github.com/TheJesusFish/Arcade-Raizing_MiSTer) implementation was based on Pramod Somashekar's archived [Raizing-FPGA](https://github.com/psomashekar/Raizing_FPGA) repo._
 
 ## GReeTz AnD ThAnX
-- Daniel Wellner, MikeJ, Sorg, and all other contributors for the T80 module
+- Daniel Wallner, MikeJ, Sorg, and all other contributors for the T80 module
 - JT for his JT6295 module
 - Raki for his IKAOPM and SDRAM modules
 - Jorge Cwik for the 68k module
